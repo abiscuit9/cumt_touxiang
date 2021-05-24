@@ -1,0 +1,82 @@
+/**index.wxss**/
+
+.navPageBackPic {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.drawPart {
+  position: relative;
+  transform: translateY(-50%);
+  top: 62vh;
+  width: 100vw;
+  min-height: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.getAvatarBtn {
+  width: 60vw;
+  height: 60vw;
+  
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  line-height: 56vw;
+}
+
+.avatar {
+  width: 60vw;
+  height: 60vw;
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.avatarHide {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  right: 1000px;
+  top: -1000px;
+}
+
+.changeBtn {
+  position: absolute;
+  width: 70rpx;
+  height: 80rpx;
+  background: none;
+  top: 58vh;
+  line-height: 80rpx;
+}
+
+.RightBtn {
+  right: 50rpx;
+}
+
+.LeftBtn {
+  left: 50rpx;
+}
+
+.downBtn {
+  display: flex;
+  /* bottom: 260rpx; */
+  /* bottom: 12vh; */
+  bottom: 0;
+  position: absolute;
+  flex-direction: row;
+}
+
+.downloadBtn {
+  width: 230rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: none;
+  margin: 0 40rpx;
+}

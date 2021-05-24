@@ -1,0 +1,21 @@
+<!-- index.wxml -->
+
+<view class="container">
+  <image mode="aspectFill" class='navPageBackPic' src="{{navPageBackPicSrc}}"></image>
+  <view class='shareText'>
+  </view>
+
+  <view class='drawPart'>
+    <button class='getAvatarBtn' wx:if="{{!hasUserInfo && canIUseGetUserProfile}}" bindtap="getUserProfile"> 点击获取你的头像 </button>
+    <block wx:else>
+      <canvas class='avatar' canvas-id="myCanvas"></canvas>
+      <canvas class='avatarHide' canvas-id="myCanvasHide"></canvas>
+    </block>
+    <view class="downBtn">
+      <image class="downloadBtn" bindtap="savePic" src="{{btn_getAvatar}}"></image>
+      <image class="downloadBtn" bindtap="chooseLocalImage" src="{{btn_changeAvatar}}"></image>
+    </view>
+  </view>
+  <image class="changeBtn LeftBtn" bindtap="changeLogoLeft" src='{{btn_leftArrow}}'></image>
+  <image class="changeBtn RightBtn" bindtap="changeLogoRight" src='{{btn_rightArrow}}'></image>
+</view>
