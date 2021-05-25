@@ -116,19 +116,34 @@ Page({
           cWidthHide = 1000;
         }
         app.globalData.WidthOrigin = cWidthHide
-        if (1 <= logoPath && logoPath <= 4) {
-          ctxHide.drawImage(avatarPath, cWidthHide / 8, cWidthHide / 8, cWidthHide * 3 / 4, cWidthHide * 3 / 4);
-          ctxHide.drawImage(that.data.logoArr[logoPath], 0, 0, cWidthHide, cWidthHide);
-        } else if (logoPath === 0) {
+
+        if (logoPath === 0 ) {
           ctxHide.drawImage(avatarPath, 0, 0, cWidthHide, cWidthHide);
           ctxHide.drawImage(that.data.logoArr[0], cWidthHide / 12, cWidthHide * 7 / 12, cWidthHide / 3, cWidthHide / 3);
-        } else if (5 <= logoPath && logoPath <= 9) {
+        }else if (logoPath === 1) {
+          ctxHide.drawImage(avatarPath, cWidthHide / 8, cWidthHide / 8, cWidthHide * 3 / 4, cWidthHide * 3 / 4);
+          ctxHide.drawImage(that.data.logoArr[logoPath], 0, 0, cWidthHide, cWidthHide);
+        } else if (2 <= logoPath && logoPath <= 3) {
+          ctxHide.drawImage(avatarPath, cWidthHide * 1 / 18, cWidthHide * 1 / 18, cWidthHide * 8 / 9, cWidthHide * 8 / 9);
+          ctxHide.drawImage(that.data.logoArr[logoPath], 0, 0, cWidthHide, cWidthHide);
+        } else if (4 <= logoPath && logoPath <= 5) {
+          ctxHide.drawImage(avatarPath, cWidthHide * 1 / 12, cWidthHide * 1 / 12, cWidthHide * 5 / 6, cWidthHide * 5 / 6);
+          ctxHide.drawImage(that.data.logoArr[logoPath], 0, 0, cWidthHide, cWidthHide);
+        } else if (6 <= logoPath && logoPath <= 7) {
+          ctxHide.drawImage(avatarPath, cWidthHide * 1 / 20, cWidthHide * 1 / 20, cWidthHide * 9 / 10, cWidthHide * 9 / 10);
+          ctxHide.drawImage(that.data.logoArr[logoPath], 0, 0, cWidthHide, cWidthHide);
+        } else if (8 <= logoPath && logoPath <= 12) {
           ctxHide.drawImage(avatarPath, cWidthHide / 16, cWidthHide / 16, cWidthHide * 7 / 8, cWidthHide * 7 / 8);
+          ctxHide.drawImage(that.data.logoArr[logoPath], 0, 0, cWidthHide, cWidthHide);
+        } else if (logoPath === 13) {
+          ctxHide.drawImage(avatarPath, cWidthHide * 1 / 14, cWidthHide * 1 / 14, cWidthHide * 6 / 7, cWidthHide * 6 / 7);
+          ctxHide.drawImage(that.data.logoArr[logoPath], 0, 0, cWidthHide, cWidthHide);
+        } else if (logoPath === 14) {
+          ctxHide.drawImage(avatarPath, cWidthHide * 1 / 8, cWidthHide * 1 / 8, cWidthHide * 3 / 4, cWidthHide * 3 / 4);
           ctxHide.drawImage(that.data.logoArr[logoPath], 0, 0, cWidthHide, cWidthHide);
         }
         ctxHide.draw();
         wx.hideLoading()
-
       },
     })
   },
