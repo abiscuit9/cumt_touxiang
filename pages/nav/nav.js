@@ -22,7 +22,7 @@ Page({
 
   onShareAppMessage: function(res) {
     return {
-      title: '快来PICK你的专属校庆头像！',
+      title: '快来PICK你的矿大专属头像！',
       path: '/pages/nav/nav',
       imageUrl: app.globalData.sharePicSrc
     }

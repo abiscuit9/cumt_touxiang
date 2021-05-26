@@ -8,7 +8,7 @@ Page({
    */
   data: {
     sharePageBackPicSrc: '../../resource/images/shareback.png',
-    shareText: "保存图片到手机后，您可分享给好友您的矿大专属头像",
+    shareText: "保存图片到手机后，您可发送给好友您的矿大专属头像",
     shareToPicSrc: '../../resource/images/shareBtn.png',
 
   },
@@ -19,7 +19,7 @@ Page({
 
   onShareAppMessage: function (res) {
     return {
-      title: '快来PICK你的专属校庆头像！',
+      title: '快来PICK你的矿大专属头像！',
       path: '/pages/nav/nav',
       imageUrl: app.globalData.sharePicSrc
     }
@@ -39,7 +39,7 @@ Page({
   },
 
   toMoments: function () {
-    let cWidth = app.globalData.canvasWidth * 72 / 100;
+    let cWidth = app.globalData.canvasWidth;
     wx.canvasToTempFilePath({
       x: 0,
       y: 0,
@@ -50,7 +50,7 @@ Page({
           success(res) {
             wx.showModal({
               title: '图片已保存',
-              content: '分享给好友一起生成矿大专属头像！',
+              content: '分享给好友，一起生成矿大专属头像吧！',
               showCancel: false,
             })
           }

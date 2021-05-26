@@ -27,7 +27,7 @@ Page({
 
   onShareAppMessage: function (res) {
     return {
-      title: '快来给你换上一个矿大专属头像吧！',
+      title: '快来PICK你的矿大专属头像！',
       path: '/pages/nav/nav',
       imageUrl: app.globalData.sharePicSrc
     }
@@ -190,7 +190,7 @@ Page({
             success(res) {
               wx.showModal({
                 title: '已保存',
-                content: '新头像已经保存到手机相册里啦！快去换上专属于你的矿大头像!',
+                content: '新头像已经保存到相册里啦！快去换上专属于你的矿大头像!',
                 showCancel: false,
                 success: function (res) {
                   that.goShare();

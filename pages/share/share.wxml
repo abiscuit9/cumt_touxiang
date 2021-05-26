@@ -5,7 +5,6 @@
 
   <view class="footer">
      <image class="shareBtnPic" bindtap="toFriends" src="{{shareToPicSrc}}"></image> 
-    <button open-type='share' class="shareBtn toFriends" bindtap="toFriends"></button>
     <button class="shareBtn toMoments" bindtap="toMoments"></button>
   </view>
 </view>
