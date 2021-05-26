@@ -38,7 +38,7 @@ Page({
   },
 
   runWhenFinishReady: function () {
-    for (let i = 0; i <= 13; i++) {
+    for (let i = 0; i <= 14; i++) {
       this.data.logoArr.push(`../../resource/images/logo_${i}.png`)
     }
     if (app.globalData.avatarUrl) {
@@ -94,15 +94,18 @@ Page({
     } else if (6 <= logoPath && logoPath <= 7) {
       ctx.drawImage(avatarPath, cWidth * 1 / 20, cWidth * 1 / 20, cWidth * 9 / 10, cWidth * 9 / 10);
       ctx.drawImage(that.data.logoArr[logoPath], 0, 0, cWidth, cWidth);
-    } else if (8 <= logoPath && logoPath <= 12) {
+    } else if (8 <= logoPath && logoPath <= 11) {
       ctx.drawImage(avatarPath, cWidth / 16, cWidth / 16, cWidth * 7 / 8, cWidth * 7 / 8);
       ctx.drawImage(that.data.logoArr[logoPath], 0, 0, cWidth, cWidth);
-    } else if (logoPath === 13) {
+    } else if (logoPath === 12) {
       ctx.drawImage(avatarPath, cWidth * 1 / 14, cWidth * 1 / 14, cWidth * 6 / 7, cWidth * 6 / 7);
-      ctx.drawImage(that.data.logoArr[logoPath], 0, 0, cWidth, cWidth);
+      ctx.drawImage(that.data.logoArr[logoPath], 1, -5, cWidth, cWidth);
+    }else if (logoPath === 13) {
+      ctx.drawImage(avatarPath, cWidth * 1 / 14, cWidth * 1 / 14, cWidth * 6 / 7, cWidth * 6 / 7);
+      ctx.drawImage(that.data.logoArr[logoPath], 2, 0, cWidth, cWidth);
     } else if (logoPath === 14) {
-      ctx.drawImage(avatarPath, cWidth * 1 / 8, cWidth * 1 / 8, cWidth * 3 / 4, cWidth * 3 / 4);
-      ctx.drawImage(that.data.logoArr[logoPath], 0, 0, cWidth, cWidth);
+      ctx.drawImage(avatarPath, cWidth * 1 / 14, cWidth * 1 / 14, cWidth * 6 / 7, cWidth * 6 / 7);
+      ctx.drawImage(that.data.logoArr[logoPath], -3, 0, cWidth, cWidth);
     }
 
     ctx.draw();
@@ -132,14 +135,17 @@ Page({
         } else if (6 <= logoPath && logoPath <= 7) {
           ctxHide.drawImage(avatarPath, cWidthHide * 1 / 20, cWidthHide * 1 / 20, cWidthHide * 9 / 10, cWidthHide * 9 / 10);
           ctxHide.drawImage(that.data.logoArr[logoPath], 0, 0, cWidthHide, cWidthHide);
-        } else if (8 <= logoPath && logoPath <= 12) {
+        } else if (8 <= logoPath && logoPath <= 11) {
           ctxHide.drawImage(avatarPath, cWidthHide / 16, cWidthHide / 16, cWidthHide * 7 / 8, cWidthHide * 7 / 8);
+          ctxHide.drawImage(that.data.logoArr[logoPath], 0, 0, cWidthHide, cWidthHide);
+        } else if (logoPath === 12) {
+          ctxHide.drawImage(avatarPath, cWidthHide * 1 / 14, cWidthHide * 1 / 14, cWidthHide * 6 / 7, cWidthHide * 6 / 7);
           ctxHide.drawImage(that.data.logoArr[logoPath], 0, 0, cWidthHide, cWidthHide);
         } else if (logoPath === 13) {
           ctxHide.drawImage(avatarPath, cWidthHide * 1 / 14, cWidthHide * 1 / 14, cWidthHide * 6 / 7, cWidthHide * 6 / 7);
           ctxHide.drawImage(that.data.logoArr[logoPath], 0, 0, cWidthHide, cWidthHide);
         } else if (logoPath === 14) {
-          ctxHide.drawImage(avatarPath, cWidthHide * 1 / 8, cWidthHide * 1 / 8, cWidthHide * 3 / 4, cWidthHide * 3 / 4);
+          ctxHide.drawImage(avatarPath, cWidthHide * 1 / 14, cWidthHide * 1 / 14, cWidthHide * 6 / 7, cWidthHide * 6 / 7);
           ctxHide.drawImage(that.data.logoArr[logoPath], 0, 0, cWidthHide, cWidthHide);
         }
         ctxHide.draw();

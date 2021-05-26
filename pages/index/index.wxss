@@ -68,7 +68,7 @@
   display: flex;
   /* bottom: 260rpx; */
   /* bottom: 12vh; */
-  bottom: 0;
+  bottom: -65rpx;
   position: absolute;
   flex-direction: row;
 }
