@@ -12,4 +12,4 @@
 - 关于我们：微信朋友圈样式
 - 其他：采用分包+自建图床，解决图片资源过多的问题
 
-<img width="600" alt="1" src="https://raw.githubusercontent.com/abiscuit9/cumt_touxiang/main/README.jpg">
+<img width="300" alt="1" src="https://raw.githubusercontent.com/abiscuit9/cumt_touxiang/main/README.jpg">
