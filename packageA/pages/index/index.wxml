@@ -1,0 +1,85 @@
+<block wx:if="{{crop}}">
+<view class='crop'>
+<view class='crop-top'>
+  <image-cropper id="image-cropper" limit_move="{{false}}" disable_rotate="{{false}}" width="{{width}}" height="{{height}}" disable_width="{{true}}" disable_height="{{true}}" imgSrc="{{src}}">
+</image-cropper>
+</view>
+<view class='crop-bottom'>
+  <view class="crop-bottomview">
+    <text style="color:grey">双指缩放头像，任意角度旋转</text>
+    <view class="crop-bottomview-button">
+      <view class="crop-bottomview-button-item" bindtap="cancel">
+        <view class="crop-bottomview-button-item-image-view">
+          <image class="crop-bottomview-button-item-image" src="../../static/index/cancel.png" mode="aspectFit" ></image>
+        </view>
+        <text class="crop-bottomview-button-item-text">取消</text>
+      </view> 
+      <view style="width: 60rpx;"></view>
+      <view class="crop-bottomview-button-item" bindtap="reset">
+        <view class="crop-bottomview-button-item-image-view">
+          <image class="crop-bottomview-button-item-image" src="../../static/index/reset.png" mode="aspectFit" ></image>
+        </view>
+        <text class="crop-bottomview-button-item-text">复位</text>
+      </view> 
+      <view style="width: 60rpx;"></view>
+      <view class="crop-bottomview-button-item" bindtap="cut">
+        <view class="crop-bottomview-button-item-image-view">
+          <image class="crop-bottomview-button-item-image" src="../../static/index/cut.png" mode="aspectFit"></image>
+        </view>
+        <text class="crop-bottomview-button-item-text">确认</text>
+      </view>
+    </view>
+  </view>
+</view>
+</view>
+</block>
+<view >
+<view wx:if="{{showPrivacy}}">
+  <view>隐私弹窗内容....</view>
+  <button bindtap="handleOpenPrivacyContract">查看隐私协议</button>
+  <button id="agree-btn" open-type="agreePrivacyAuthorization" bindagreeprivacyauthorization="handleAgreePrivacyAuthorization">同意</button>
+</view>
+  <image class="bg" mode="widthFix" src="../../static/index/bg.jpg"></image>
+  <view class="content">
+    <!-- panel -->
+    <view class="panel">
+      <view class="category-list">
+        <block wx:for="{{cates}}" wx:key="index">
+          <text bindtap="handleCate" data-id="{{item.id}}" class="{{item.id==cate?'active':''}}">{{item.name}}</text>
+        </block>
+      </view>
+      <scroll-view scrollX="true">
+        <block wx:for="{{chooseImgs}}" wx:key="index">
+          <view class="avatars" hidden="{{index != cate}}">
+            <view style="display: flex;flex-direction: row;margin-bottom: 10rpx;">
+              <block wx:for="{{item}}" wx:key="index">
+                <view style="display: flex;flex-direction: column;text-align: center;">
+                  <image bindtap="handleAvatar" data-avatar="{{item.src}}" src="{{item.src}}" class="{{item.src == chooseImg ? 'active' : ''}}"></image>
+                  <text class="{{item.src == chooseImg ? 'active' : ''}}">{{item.name}}</text>
+                </view>
+              </block>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+    <!-- panel -->
+    <!-- btns -->
+    <view class="btns">
+      <view class="left">
+        <canvas class="image" style="top:{{visibility}}"canvas-id="myAvatar"></canvas>
+        <!-- <image class="image" src="{{imageSrc}}"></image> -->
+      </view>
+      <view class="right">
+        <svg class="icon" aria-hidden="true">
+  <use xlink:href="#icon-31jiancai"></use>
+</svg>
+        <button bindtap="handleUpload" ><text class="iconfont icon-shangchuan" style="margin-top: -1rpx; "></text>上传图片</button>
+        <button bindtap="recrop"><text class="iconfont icon-31jiancai"></text>重新裁剪</button>
+        <button bindtap="handleSaveImg"><text class="iconfont icon-xiazai" style="margin-top: -1rpx; "></text>保存头像</button>
+        <button bindtap="about"><text class="iconfont icon-wenhao"></text>关于我们</button>
+      </view>
+    </view>
+    <!-- btns -->
+  </view>
+</view>

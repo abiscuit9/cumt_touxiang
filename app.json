@@ -1,0 +1,32 @@
+{
+    "pages": [
+        "pages/index/index"
+    ],
+"subpackages": [
+        {
+          "root": "packageA",
+          "pages": [
+            "pages/index/index"
+          ]
+        }, {
+          "root": "packageB",
+          "pages": [
+            "pages/share/share"
+          ]
+        },{
+        "root": "packageC",
+        "pages": [
+          "pages/about/about"
+        ]
+      }
+      ],
+      "entryPagePath":"packageA/pages/index/index",
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "矿大头像戳",
+        "navigationBarTextStyle": "black"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

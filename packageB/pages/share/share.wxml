@@ -1,0 +1,32 @@
+<!--pages/poster/poster.wxml-->
+<view class="posterview">
+  <canvas class="posterview-canvas" canvas-id="shareCanvas"></canvas>
+  <view class="posterview-imageview">
+    <image class="posterview-image" src="{{posterSrc}}" mode="aspectFit"></image>
+  </view>
+  <view class="posterview-bottomview">
+    <text style="color:grey">头像已保存至相册，可下载分享海报</text>
+    <view class="posterview-bottomview-button">
+      <view class="posterview-bottomview-button-item" bindtap="return">
+        <view class="posterview-bottomview-button-item-image-view">
+          <image class="posterview-bottomview-button-item-image" src="../../static/share/return.png" mode="aspectFit" ></image>
+        </view>
+        <text class="posterview-bottomview-button-item-text">返回上一页</text>
+      </view> 
+      <view style="width: 30px;"></view>
+      <view class="posterview-bottomview-button-item" bindtap="clickChangeBackImage">
+        <view class="posterview-bottomview-button-item-image-view">
+          <image class="posterview-bottomview-button-item-image" src="../../static/share/replace.png" mode="aspectFit" ></image>
+        </view>
+        <text class="posterview-bottomview-button-item-text">换一换海报</text>
+      </view> 
+      <view style="width: 30px;"></view>
+      <view class="posterview-bottomview-button-item" bindtap="shareFriend">
+        <view class="posterview-bottomview-button-item-image-view">
+          <image class="posterview-bottomview-button-item-image" src="../../static/share/save.png" mode="aspectFit"></image>
+        </view>
+        <text class="posterview-bottomview-button-item-text">保存至相册</text>
+      </view>
+    </view>
+  </view>
+</view>
